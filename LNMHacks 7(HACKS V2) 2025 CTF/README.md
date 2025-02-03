@@ -1,6 +1,10 @@
 # LNMHacks 7(HACKS V2) CTF
 
 ## by Ex0rcists
+![image](https://github.com/user-attachments/assets/e325a9fa-e6d0-41e1-8ba9-c8e955f86d5b)
+![image](https://github.com/user-attachments/assets/9ef29e96-4cd8-4fa0-bdc0-75fb1ad32085)
+
+
 
 ## WEB
 
