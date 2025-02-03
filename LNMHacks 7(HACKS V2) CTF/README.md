@@ -1,3 +1,5 @@
+# LNMHacks 7(HACKS V2) CTF
+
 ## by Ex0rcists
 
 ## WEB
@@ -5,7 +7,8 @@
 **1)CVE-2011-2202
 Exploit this :** http://43.204.215.29/
 
-![image.png](attachment:0304a847-d2a5-40af-a5c1-9cc55614e22a:image.png)
+![image](https://github.com/user-attachments/assets/c2390e0e-4832-4796-bc95-3514b67f1d44)
+
 
 **Analysis of the Challenge:**
 
@@ -34,11 +37,14 @@ CVE-2011-2202 is a **PHP remote file inclusion (RFI)** vulnerability due to impr
 
 - `%00` is a null byte that might terminate strings in older PHP versions to bypass the `.php` extension constraint.
 
-![image.png](attachment:eec2e9ee-dda4-450d-892c-bcda424ee557:image.png)
+![image](https://github.com/user-attachments/assets/da4a10e8-3fec-42a0-959b-66c9c970225c)
 
-![image.png](attachment:67e8baf3-0dc5-4e82-a8a4-222d017b3428:image.png)
 
-![image.png](attachment:2ea2dbe6-192e-4800-9a71-76544a961475:image.png)
+![image](https://github.com/user-attachments/assets/944b19ee-1642-49b5-a511-8c4573f1fb67)
+
+
+![image](https://github.com/user-attachments/assets/f917da11-033d-41e8-bbee-4aff3674e8e3)
+
 
 at `source code`
 
@@ -54,7 +60,7 @@ at `robots.txt`
 
 4)Part 4  of the flag: s_4m4zin
 
-# This is an apache server (I guess)... can you *Access* the next flag?
+ This is an apache server (I guess)... can you *Access* the next flag?
 
 at `.htaccess` 
 
@@ -72,7 +78,8 @@ Combined all 6 parts
 
 ## BINARY EXPLOITATION
 
-![image.png](attachment:77744418-6135-4427-8771-779eb829aa6e:image.png)
+![image](https://github.com/user-attachments/assets/16a552db-31cb-4824-a64d-bb6c6f95cc64)
+
 
 tool : https://github.com/pwndbg/pwndbg
 
@@ -80,23 +87,27 @@ using pwngdb tool, To know the starting address BSS stack .
 
 `info file`
 
-![image.png](attachment:799e7621-fe77-4247-bbe2-103dff0d6630:image.png)
+![image](https://github.com/user-attachments/assets/be604d2e-b4a5-4a1b-8de6-83e700da3ba0)
+
 
 To know the stored name at 1140 ,
 
 `info function`
 
-![image.png](attachment:cfb83dfe-ed66-4620-b34e-170f2f3714d6:image.png)
+![image](https://github.com/user-attachments/assets/070c0cab-000a-46eb-97ba-bb893e4181cc)
+
 
 `hacks{4010+frame_dummy}`
 
 ## REVERSE ENGINERRING
 
-![image.png](attachment:0743a5ae-3bb7-475c-9b4d-081bea339f54:image.png)
+![image](https://github.com/user-attachments/assets/86e07178-fc49-402a-ad93-210701e28fee)
+
 
 Analyzed with GHIDRA tool 
 
-![image.png](attachment:b84bf5b1-f2ed-4fd4-b0ff-a9c22833bf0c:image.png)
+![image](https://github.com/user-attachments/assets/429e2b68-abf8-4e9d-a4e7-6f5afe10a47e)
+
 
 Python snippet to decrypt this:
 
@@ -110,13 +121,15 @@ print(f)
 
 `hacks{tired_of_xors}`
 
-![image.png](attachment:3bf71916-983d-40ed-89df-8f857c8a45d0:image.png)
+![image](https://github.com/user-attachments/assets/767feb6f-e09c-4c18-ab57-2cbb5f85e8ea)
+
 
 Analyzed with ghidra , 
 
 in `rev_this` file , it contains `_hacks_{w1{1wq8]8lle<,T}`
 
-![image.png](attachment:6c4f2ab1-672b-4a7e-9b3f-0814eda21c0f:image.png)
+![image](https://github.com/user-attachments/assets/9e8ca92d-0497-49b6-8f38-80d25e827955)
+
 
 **Walkthrough of Decryption**
 
@@ -161,45 +174,51 @@ print("Decrypted Flag:", decrypted_flag)
 
 ```
 
-![image.png](attachment:7d9725c5-3c75-45b7-8907-eb3324aff636:image.png)
-
 `hacks{r3v3rs3_3ngg7.O}`
 
-![image.png](attachment:061a9f59-dd80-4a80-b66b-7e2a78be8605:image.png)
+![image](https://github.com/user-attachments/assets/fb030ddf-d9bf-416e-a39e-89262efd599a)
+
 
 We Got 1st BLOOD 🩸for this challenge
 
 step 1 : r2 -AA binfile             //flag(to know detail r2 documentation)
 
-![image.png](attachment:f2d86310-e27c-446f-8b77-9b5bc8ea0855:image.png)
+![image](https://github.com/user-attachments/assets/a9bdf74d-2a52-458a-91a0-27021c3f732a)
+
 
 step 2: afl            // analyze list of fn
 
-![image.png](attachment:64583a4b-64dd-4dbe-abce-3fb7dc96164a:image.png)
+![image](https://github.com/user-attachments/assets/fe46754e-c41e-4b91-9368-b9335135fb00)
+
 
 step 3: pdf @ sym.main
 
-![image.png](attachment:1ce332ef-476c-4385-a4e9-d404e65a8859:image.png)
+![image](https://github.com/user-attachments/assets/67e098f4-519c-4485-9a06-a81e745083ab)
 
-![image.png](attachment:03cdaece-1180-4bee-af12-478297d4c6da:image.png)
+
+![image](https://github.com/user-attachments/assets/716e249c-465b-4a85-9b55-800d79bed084)
+
 
 at  memory of the  obj.ENCRYPTED_FLAG which was `;s1r0%6-`
 
 step 4: pdf @ sym.transform_input   // at this function it is XOR 
 
-![image.png](attachment:0c0b7a6d-fcfa-4b7d-884a-18385212af5c:image.png)
+![image](https://github.com/user-attachments/assets/0cdad8c2-b566-4cd5-913f-f34724b23381)
+
 
  bruteforce xor key from 1 to 16 bytes using dcode
 
-![image.png](attachment:9f6ca37f-cde2-4b0b-980e-21cd77775c4e:image.png)
+![image](https://github.com/user-attachments/assets/48f63133-ecda-48cb-9424-711225aef548)
+
 
 `hacks{x0rlsfun}`
 
 ## OSINT
 
-![image.png](attachment:63d4f5bb-ac0c-46c2-81c5-cc63810098af:image.png)
+![image](https://github.com/user-attachments/assets/8a4a1da4-0ce9-405b-bdfd-c259791728e8)
 
-![Screenshot_2025-01-24_053440.png](attachment:c5604191-0f98-4ac8-a276-a6ab7239df65:Screenshot_2025-01-24_053440.png)
+
+![image](https://github.com/user-attachments/assets/9f30c743-f09a-4cff-a053-55d582b6d33a)
 
 To identify the country in this image , Given to gpt and analyze with  Architecture and Landscape and Road Markings and Signage.
 
@@ -220,47 +239,57 @@ Upon further analysis of the image and its features, the country is most likely 
 
 `hacks{Oman}`
 
-![image.png](attachment:eed9fbc9-4e89-41b2-8e0f-15914ea25302:image.png)
+![image](https://github.com/user-attachments/assets/c6cad6fc-dfd9-465b-b102-ac0288085018)
+
 
 If you zoom this given image , name mentioned `Paris,lle-de-France`
 
-![image.png](attachment:03b0e3ae-c299-4fd7-8fad-566cd873eacd:image.png)
+![image](https://github.com/user-attachments/assets/79a83af7-efe5-4da4-bcf0-8ade4ccaa7bd)
 
-![image.png](attachment:d26f5a51-956c-45f1-81c8-851ffdb82eb3:image.png)
+
+![image](https://github.com/user-attachments/assets/c3efe4cd-df4f-4109-8319-e087ca7901a0)
+
 
 `hacks{Gare_de_l’Est}`
 
 ## GENERAL
 
-![image.png](attachment:8105efd5-f3d2-499e-b5cb-95b7785fe9f2:image.png)
+![image](https://github.com/user-attachments/assets/6a4a80a6-a679-49ee-be36-450a332a1033)
+
 
 https://deobfuscate.io/
 
 Deobfuscated javascript
 
-![image.png](attachment:601ab9cc-d61f-4739-9e8e-ddf3e892bf1d:image.png)
+![image](https://github.com/user-attachments/assets/a54731b2-b05f-41b2-99af-053bcadaf157)
+
 
 again deobfuscated with this https://obf-io.deobfuscate.io/ to get flag
 
-![image.png](attachment:6822cec8-1605-4a80-9e02-70af43649784:image.png)
+![image](https://github.com/user-attachments/assets/776d3168-349c-402f-8f43-852f9d2fd501)
+
 
 ## CRYPTOGRAPHY
 
-![image.png](attachment:1143f20e-da8d-4df8-b739-1e417853fba9:image.png)
+![image](https://github.com/user-attachments/assets/085200e7-fc11-4e3f-a5d9-4d16186d5132)
+
 
 In `Readme.txt`
 
-![image.png](attachment:e4da21c1-1b9f-43c8-bd68-9aedbdf9ff71:image.png)
+![image](https://github.com/user-attachments/assets/29bcd7e9-363c-439e-bc60-e35c80832c2b)
 
-![image.png](attachment:9e3a4a2e-84b1-462a-a3f1-f5a0e7acc636:image.png)
+
+![image](https://github.com/user-attachments/assets/c862585c-4473-4e5f-9399-cf9ae1ab5bc7)
+
 
 password for Step1.zip : `Butterfly3`
 
 Another `Readme.txt` inside and also has `THEFLAG.zip` , `wordlist.zip`
 
-![image.png](attachment:4af3eaea-ca08-4a4a-be6d-d7c6b87860c0:image.png)
+![image](https://github.com/user-attachments/assets/2ea09732-047b-44b3-9f29-ca3da94c733d)
 
-![image.png](attachment:8fa82bf4-f8b4-4560-a715-f0da606eaa62:image.png)
+![image](https://github.com/user-attachments/assets/f160cd8e-294f-494a-b8df-4a6a6e313d30)
+
 
 password for **wordlist.zip** : `Password@123`
 
@@ -268,33 +297,40 @@ using the given wordlist **password.lst , again bruteforced with john and got**
 
 password for **`THEFLAG.zip`** : `p455w0rdn01f0und`
 
-![combined.png](attachment:51051db6-69cd-4d29-9230-8a549499eccb:3b777553-275e-4369-8969-cfb041b3eda0.png)
+![image](https://github.com/user-attachments/assets/0d0343de-349e-41e2-8c86-2ce29b351c44)
+
 
 second part found in another pdf file which was extracted using `binwalk -e combined.png`
 
 or use `aprisolve.com`
 
-![image.png](attachment:bb3be5e2-d87b-47a8-b9e8-547c80d5acf7:image.png)
+![image](https://github.com/user-attachments/assets/656c3647-7faa-4185-9084-657fb2e933b9)
+
 
 `hacks{HASH__cr4ck1ng}`
 
 ## FORENSICS
 
-![image.png](attachment:1cef77b0-7579-40a2-8b5f-555f9146a288:image.png)
+![image](https://github.com/user-attachments/assets/8df9a5a1-4018-40d4-88e3-74ae48289ac9)
+
 
 Exported two objects at HTTP 
 
-![image.png](attachment:b28b0567-f15d-44b6-914b-8bff08f9a884:image.png)
+![image](https://github.com/user-attachments/assets/86a7a0c9-5325-43f1-993b-3eecdf810858)
+
 
 it was two jpeg file
 
-![image.png](attachment:db0d1712-1563-460c-8526-de0bb44e00ce:image.png)
+![image](https://github.com/user-attachments/assets/8726cb8b-cf48-4768-ac58-adb03daa4696)
 
-![image.png](attachment:8d0641f3-d5b0-4b33-b6ca-75a38e17b771:image.png)
+
+![image](https://github.com/user-attachments/assets/42ec68e3-4c9c-41f5-b54e-b25bfeafb82e)
+
 
 `hacks{sh4rk_b1t3$_p4ck37$}`
 
-![image.png](attachment:ad6d8571-37cb-4a93-b765-f50c36d5d55d:image.png)
+![image](https://github.com/user-attachments/assets/7326e76e-6523-44a7-9129-35e694a59475)
+
 
 After extracted the tar file
 
@@ -304,31 +340,38 @@ using HxD editor
 
 found the given random file is `jpg` file based on `magic bytes`(jpg end hex value) which is FF D9
 
-![image.png](attachment:5a91621a-a285-42ea-85c9-61abf4e9c2f9:image.png)
+![image](https://github.com/user-attachments/assets/cc8def45-eea2-40e7-9765-02a489da66dc)
+
 
 But starting hex value not there, add to it 
 
-![image.png](attachment:da8d3953-39bc-4e09-a952-39f5735760e2:image.png)
+![image](https://github.com/user-attachments/assets/24ebd42c-6924-4ca8-9c01-b41c601ee25e)
+
 
 insert  `FF D8 F E0 00 10 4A 46 49 46` at start, the hex values which also given in end of `file` which they given and save file with extension `.jpg`
 
-![image.png](attachment:19e6ebe1-b5d0-48d5-bf07-f5f1bf98f852:image.png)
+![image](https://github.com/user-attachments/assets/4473e2c6-a99d-41d7-9eae-eef81abef957)
+
 
 but this is fake flag,
 
-![Untitled2.jpg](attachment:0d093c62-7698-4e0a-a1dc-ebc73cc08ba8:Untitled2.jpg)
+![image](https://github.com/user-attachments/assets/a3aadd2c-7066-4475-8c53-67d952ffc82b)
+
 
 using `stegseek` tool , 
 
-![image.png](attachment:5f871276-3aea-4e5c-a175-722d5e0d5e47:image.png)
+![image](https://github.com/user-attachments/assets/b6abc6d2-6f7f-4a99-a691-ca385d6f032b)
+
 
 `hacks{4re_y0u_4_ch1ll_guy}`
 
-![image.png](attachment:254c0ce8-1c19-42c0-b3c4-2362f43b8893:image.png)
+![image](https://github.com/user-attachments/assets/63186bd7-426f-4774-9446-6ae01e37567e)
+
 
 it has nothing in given ppt
 
-![image.png](attachment:4d072ee4-308c-4d93-a73c-785241054acd:image.png)
+![image](https://github.com/user-attachments/assets/d0709194-27f5-4b27-9b0e-7cac3787fdad)
+
 
 but the MACRO was hint,
 
@@ -338,11 +381,12 @@ basically  **PPT file (PowerPoint presentation) is essentially a zipped file**,
 
 so, changed extension as zip and viewed at macro at `file.zip\ppt\slideMasters\_rels` 
 
-![image.png](attachment:ce770dff-ff44-4c8e-80b2-3637ec148de5:image.png)
+![image](https://github.com/user-attachments/assets/0a2af7da-10c3-4b81-aac6-ccf34f00708f)
+
 
 but, there are 1000 folders , but if you looked at size,
 
-![image.png](attachment:bf2e0f85-edea-4538-9f90-432a7442a2c9:image.png)
+![image](https://github.com/user-attachments/assets/744e8d19-4dd3-45bc-84bd-bccbaa61489f)
 
 last folder is different from all , so opened it and got hex values in `macro.vba` file
 
@@ -354,15 +398,17 @@ converted to strings
 
 ## STEGANOGRAPHY
 
-![image.png](attachment:ac3ff271-06e7-44cd-acc9-7aea133d6be8:image.png)
+![image](https://github.com/user-attachments/assets/7abb22a4-83db-4a1b-9e89-77ff14438fb8)
 
 `strings landscape.jpg`
 
-![image.png](attachment:7e3e578c-69c7-4f6c-a1f0-dd13c62e719a:image.png)
+![image](https://github.com/user-attachments/assets/cc6a3c2d-5939-4ad6-b877-5d1b5e94b119)
+
 
 `base64` encoding found at center
 
-![image.png](attachment:4098fb50-e96d-470e-8446-4c634f3dab7f:image.png)
+![image](https://github.com/user-attachments/assets/8bac3388-8059-4481-82d5-746caeef8d7b)
+
 
 ***Moscow Standard Time(MSK) is 2 hours and 30 minutes behind India Standard Time***
 
