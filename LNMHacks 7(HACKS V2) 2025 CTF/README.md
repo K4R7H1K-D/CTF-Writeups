@@ -1,7 +1,8 @@
-# LNMHacks 7(HACKS V2) CTF
+# LNMHacks 7(HACKS V2) 2025 CTF
 
 ## by Ex0rcists
-![image](https://github.com/user-attachments/assets/e325a9fa-e6d0-41e1-8ba9-c8e955f86d5b)
+![image](https://github.com/user-attachments/assets/cc7f784a-31c9-427c-bbcc-8afca79d9864)
+
 ![image](https://github.com/user-attachments/assets/8a84b6f0-c078-4f17-b601-6173799045a2)
 
 
