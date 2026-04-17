@@ -10,5 +10,5 @@ WRITEUP COLLECTION - https://glory-jitterbug-745.notion.site/CTF-Writeups-collec
 
 OS , NETWORK SETUP VM - https://glory-jitterbug-745.notion.site/OS-Network-Setup-2002bfc3213c8047be36e5b036893f6e
 
-EJPT - https://glory-jitterbug-745.notion.site/EJPT-Exam-24e2bfc3213c805ea3c9f2645bb3f4c9?pvs=73
+
 
